@@ -40,11 +40,45 @@ set completeopt=menuone,longest		" auto complete menu
 call plug#begin()
 
 " Status bar
-Plug 'vim-arline/vim-airline'
-Plug 'vim-arline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='minimalist'
 
-
-Plug 'vifm/vifm.vim' 
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/AutoComplPop'
+Plug 'norcalli/nvim-colorizer.lua'
+" "Plug 'RRethy/nvim-base16'
+Plug 'axvr/photon.vim'
 
 call plug#end()
+
+colorscheme photon
+
+set splitbelow splitright
+
+" remap split navigation to just CTRL + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" adjust split sizes easier
+noremap <silent> <C-Left> :vertical resize +3<CR>
+noremap <silent> <C-Right> :vertical resize -3<CR>
+noremap <silent> <C-Up> :resize -3<CR>
+noremap <silent> <C-Down> :resize +3<CR>
+
+" automatically close brackets and parenthesis and place cursor inside
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>0
+inoremap {;<CR> {<CR>};<ESC>0
+
+" remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+

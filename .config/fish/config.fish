@@ -2,9 +2,7 @@
 
 set fish_greeting
 
-set TERM "xterm-256color"
 set EDITOR "nvim"
-
 
 function fish_user_keybindings
 	fish_vi_key_bindings

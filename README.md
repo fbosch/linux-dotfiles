@@ -12,3 +12,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 ```sh
 git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
 ``` 
+
+___
+
+### Credits
+
+* [Repository Structure](https://www.atlassian.com/git/tutorials/dotfiles)

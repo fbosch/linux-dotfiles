@@ -2,11 +2,10 @@
 
 set fish_greeting
 
-set EDITOR "nvim"
+# set EDITOR nvim
 
-function fish_user_keybindings
-	fish_vi_key_bindings
-end
+
+starship init fish | source
 
 
 # Custom Function for a sudo !! replacement
@@ -20,4 +19,3 @@ else
 end
 
 
-starship init fish | source

@@ -43,9 +43,6 @@ call plug#begin()
 " Status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='minimalist'
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
@@ -60,9 +57,18 @@ call plug#end()
 
 colorscheme photon
 
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='minimalist'
+
 nnoremap <silent> <C-e> :NERDTreeToggle<CR>
 
 set splitbelow splitright
+
+augroup autocommands
+	" remove trailing whitespace on save
+	autocmd BufWritePre * %s/\s\+$//e
+augroup END
 
 " remap split navigation to just CTRL + hjkl
 nnoremap <C-h> <C-w>h
@@ -90,6 +96,22 @@ nnoremap <silent>    <S-,> :BufferPrevious<CR>
 nnoremap <silent>    <S-.> :BufferNext<CR>
 
 
-" remove trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
+" tabs
+nnoremap <silent> <C-t>n :tabnew %<cr>
+nnoremap <silent> <C-t><C-n> :tabnew %<cr>
+nnoremap <silent> <C-t>c :tabclose<cr>
+nnoremap <silent> <C-t><C-c> :tabclose<cr>
+nnoremap <silent> <C-t>h :tabprevious<cr>
+nnoremap <silent> <C-t><C-h> :tabprevious<cr>
+nnoremap <silent> <C-t>l :tabnext<cr>
+nnoremap <silent> <C-t><C-l> :tabnext<cr>
+nnoremap <silent> <C-t>1 1gt
+nnoremap <silent> <C-t>2 2gt
+nnoremap <silent> <C-t>3 3gt
+nnoremap <silent> <C-t>4 4gt
+nnoremap <silent> <C-t>5 5gt
+nnoremap <silent> <C-t>6 6gt
+nnoremap <silent> <C-t>7 7gt
+nnoremap <silent> <C-t>8 8gt
+nnoremap <silent> <C-t>9 9gt
 

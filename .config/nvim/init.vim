@@ -1,4 +1,4 @@
-let mapleader = ","
+let mapleader = " "
 
 set title
 set path+=** 				        " searches current directory recursively
@@ -35,6 +35,8 @@ set clipboard+=unnamedplus	    	" sets the clipboard so that you can pase stuff 
 
 set complete+=kspell			    " auto complete with spellcheck
 set completeopt=menuone,longest		" auto complete menu
+set termguicolors
+
 
 " PLUGINS
 call plug#begin()
@@ -46,15 +48,18 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='minimalist'
 
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'norcalli/nvim-colorizer.lua'
-" "Plug 'RRethy/nvim-base16'
 Plug 'axvr/photon.vim'
 
 call plug#end()
 
 colorscheme photon
+
+nnoremap <silent> <C-e> :NERDTreeToggle<CR>
 
 set splitbelow splitright
 
@@ -78,6 +83,11 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>0
 inoremap {;<CR> {<CR>};<ESC>0
+
+" Move to previous/next
+nnoremap <silent>    <S-,> :BufferPrevious<CR>
+nnoremap <silent>    <S-.> :BufferNext<CR>
+
 
 " remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e

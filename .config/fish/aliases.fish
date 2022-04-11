@@ -10,11 +10,18 @@ abbr cfpic 'sudo nvim ~/.config/picom/picom.conf'
 abbr cfkit 'sudo nvim ~/.config/kitty/kitty.conf'
 abbr cfas 'sudo nvim ~/.local/share/dwm/autostart.sh'
 abbr cfvi 'nvim ~/.config/nvim/init.vim'
+abbr cftm 'nvim ~/.config/tmux/tmux.conf'
 
 # Utilities
-abbr ccat 'pygmentize -g -O style=colorful,lineos=1'
+alias cat 'pygmentize -g -O style=colorful,lineos=1'
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'
 abbr src 'source ~/.config/fish/config.fish'
+
+# Tmux
+abbr xtm 'pkill -f tmux'
+abbr ntm 'tmux new -s'
+abbr atm 'tmux attach-session -t'
+
 
 # Git
 abbr g 'git'

@@ -1,4 +1,4 @@
-let mapleader = " "
+let mapleader = ","
 
 set title
 set path+=**                    " searches current directory recursively
@@ -63,7 +63,6 @@ let g:airline_theme='minimalist'
 
 nnoremap <silent> <C-e> :NERDTreeToggle<CR>
 
-set splitbelow splitright
 
 augroup autocommands
 	" remove trailing whitespace on save
@@ -95,23 +94,21 @@ inoremap {;<CR> {<CR>};<ESC>0
 nnoremap <silent>    <S-,> :BufferPrevious<CR>
 nnoremap <silent>    <S-.> :BufferNext<CR>
 
-
 " tabs
-nnoremap <silent> <C-t>n :tabnew %<cr>
-nnoremap <silent> <C-t><C-n> :tabnew %<cr>
-nnoremap <silent> <C-t>c :tabclose<cr>
-nnoremap <silent> <C-t><C-c> :tabclose<cr>
-nnoremap <silent> <C-t>h :tabprevious<cr>
-nnoremap <silent> <C-t><C-h> :tabprevious<cr>
-nnoremap <silent> <C-t>l :tabnext<cr>
-nnoremap <silent> <C-t><C-l> :tabnext<cr>
-nnoremap <silent> <C-t>1 1gt
-nnoremap <silent> <C-t>2 2gt
-nnoremap <silent> <C-t>3 3gt
-nnoremap <silent> <C-t>4 4gt
-nnoremap <silent> <C-t>5 5gt
-nnoremap <silent> <C-t>6 6gt
-nnoremap <silent> <C-t>7 7gt
-nnoremap <silent> <C-t>8 8gt
-nnoremap <silent> <C-t>9 9gt
-
+nnoremap th  :tabfirst<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tm  :tabm<Space>
+nnoremap <silent> <C-t>n :tabnew<CR>
+nnoremap <silent> <C-t>d :tabclose<CR>
+noremap <silent> <C-t>1 1gt
+noremap <silent> <C-t>2 2gt
+noremap <silent> <C-t>3 3gt
+noremap <silent> <C-t>4 4gt
+noremap <silent> <C-t>5 5gt
+noremap <silent> <C-t>6 6gt
+noremap <silent> <C-t>7 7gt
+noremap <silent> <C-t>8 8gt
+noremap <silent> <C-t>9 9gt

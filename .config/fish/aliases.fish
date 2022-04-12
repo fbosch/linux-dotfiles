@@ -13,16 +13,18 @@ abbr cfvi 'nvim ~/.config/nvim/init.vim'
 abbr cftm 'nvim ~/.config/tmux/tmux.conf'
 abbr cflf 'nvim ~/.config/lf/lfrc'
 
-# Utilities
-alias cat 'pygmentize -g -O style=colorful,lineos=1'
+# Helpers
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'
 abbr src 'source ~/.config/fish/config.fish'
+
+# Extended defaults
+alias cat 'pygmentize -g -O style=colorful,lineos=1'
+alias ls 'logo-ls'
 
 # Tmux
 abbr xtm 'pkill -f tmux'
 abbr ntm 'tmux new -s'
 abbr atm 'tmux attach-session -t'
-
 
 # Git
 abbr g 'git'

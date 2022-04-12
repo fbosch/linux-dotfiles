@@ -1,3 +1,9 @@
 set shell fish
-set drawbox true
 set icons true
+set previewer ~/.config/lf/lf_kitty_preview
+set cleaner ~/.config/lf/lf_kitty_clean
+set mouse true
+set hidden true
+
+cmd open $set -f; rifle -p 0 $fx
+

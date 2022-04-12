@@ -23,6 +23,8 @@ else
     end
 end
 
+base16-black-metal-burzum
+
 starship init fish | source
 
 

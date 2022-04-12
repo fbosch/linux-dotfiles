@@ -49,14 +49,14 @@ Plug 'romgrk/barbar.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'axvr/photon.vim'
 Plug 'dag/vim-fish'
+Plug 'chriskempson/base16-vim'
 Plug 'godlygeek/tabular'
 Plug 'VebbNix/lf-vim'
 
 call plug#end()
 
-colorscheme photon
+colorscheme base16-black-metal-burzum
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1

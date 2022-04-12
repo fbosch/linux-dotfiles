@@ -19,7 +19,7 @@ abbr src 'source ~/.config/fish/config.fish'
 
 # Extended defaults
 alias cat 'pygmentize -g -O style=colorful,lineos=1'
-alias ls 'logo-ls'
+alias ls 'logo-ls' # https://aur.archlinux.org/packages/logo-ls
 
 # Tmux
 abbr xtm 'pkill -f tmux'

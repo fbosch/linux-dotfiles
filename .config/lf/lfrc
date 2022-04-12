@@ -1,0 +1,3 @@
+set shell fish
+set drawbox true
+set icons true

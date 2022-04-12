@@ -52,6 +52,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'axvr/photon.vim'
 Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
+Plug 'VebbNix/lf-vim'
 
 call plug#end()
 

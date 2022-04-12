@@ -11,6 +11,7 @@ abbr cfkit 'sudo nvim ~/.config/kitty/kitty.conf'
 abbr cfas 'sudo nvim ~/.local/share/dwm/autostart.sh'
 abbr cfvi 'nvim ~/.config/nvim/init.vim'
 abbr cftm 'nvim ~/.config/tmux/tmux.conf'
+abbr cflf 'nvim ~/.config/lf/lfrc'
 
 # Utilities
 alias cat 'pygmentize -g -O style=colorful,lineos=1'

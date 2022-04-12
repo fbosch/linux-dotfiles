@@ -2,11 +2,16 @@
 
 set fish_greeting
 
-# set EDITOR nvim
+set TERMINAL kitty
+set EDITOR nvim
+set VISUAL nvim
+set VIDEO mpv
+set IMAGE sxiv
+set WM dwm
 
-
-starship init fish | source
-
+function fish_user_keybindings
+	fish_vi_key_bindings
+end
 
 # Custom Function for a sudo !! replacement
 
@@ -17,5 +22,9 @@ else
     command sudo $argv
     end
 end
+
+starship init fish | source
+
+
 
 

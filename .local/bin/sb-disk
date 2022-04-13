@@ -1,0 +1,8 @@
+#!/bin/sh
+
+avail=$(df / | awk 'NR==2 {printf "%2.1f", ($4 / 1024 / 1024)}')
+percentUsed=$(df / | awk -F'[^0-9]*' 'NR==2 {print $5}')
+icon=""
+
+[ $percentUsed -le 10 ]
+echo " $icon ${avail}G"

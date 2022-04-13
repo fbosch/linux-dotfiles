@@ -9,10 +9,6 @@ set VIDEO mpv
 set IMAGE sxiv
 set WM dwm
 
-function fish_user_keybindings
-	fish_vi_key_bindings
-end
-
 # Custom Function for a sudo !! replacement
 function sudo --description "replacement for 'sudo !!' command to run last command using sudo"
     if test "$argv" = !!
@@ -36,8 +32,17 @@ function lfcd --description "lf to switch directories"
         end
     end
 end
+
+# Keybindings
+function fish_user_keybindings
+  fish_vi_key_bindings
+end
+
 bind \co 'lfcd' # Change directories when pressing CTRL+O
+# peco
+bind \cr 'peco_select_history' # Bind for peco select history to Ctrl+R
+bind \cf 'peco_change_directory' # Bind for peco change directory to Ctrl+F
+
 
 base16-black-metal-burzum
-
 starship init fish | source

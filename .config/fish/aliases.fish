@@ -1,6 +1,9 @@
 
 # Configurations
 alias config '/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+abbr cfa 'config add'
+abbr cfr 'config remove'
+abbr cfs 'config status'
 
 # Config Shortcuts
 abbr cfx 'snvim ~/.xinitrc'
@@ -22,10 +25,9 @@ abbr makins 'sudo make && sudo make clean install'
 
 # Extended defaults
 alias cat 'pygmentize -g -O style=colorful,lineos=1'
-alias ls 'exa -l -g --icons'
+alias ll 'exa -l -g --icons'
 alias lla 'll -a'
 alias tree 'll --tree --level=2 -a'
-alias ranger 'lf' # old habit
 
 # Tmux
 abbr xtm 'pkill -f tmux'
@@ -41,12 +43,12 @@ abbr co 'git checkout'
 
 # Arch
 alias pacman 'sudo pacman'
-abbr pupg 'pacman -Syu'
-abbr yupg 'yay -Syu'
-abbr pupd 'pacman -Sy'
-abbr yupd 'yay -Sy'
-abbr pins 'pacman -S'
-abbr yins 'yay -S'
+abbr pup 'pacman -Syu'
+abbr yup 'yay -Syu'
+abbr pud 'pacman -Sy'
+abbr yud 'yay -Sy'
+abbr pin 'pacman -S'
+abbr yin 'yay -S'
 abbr prm 'pacman -R'
 abbr yrm 'yay -R'
 abbr pun 'pacman -Rcsn'
@@ -60,4 +62,5 @@ alias power 'sudo sh ~/.local/bin/power.sh'
 
 # Programs
 alias vim 'nvim'
+abbr v 'nvim'
 alias snvim 'sudo -E -s nvim' # launch vim in sudo but preserve env config

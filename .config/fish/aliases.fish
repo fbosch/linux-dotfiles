@@ -2,7 +2,7 @@
 # Configurations
 alias config '/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
-
+# Config Shortcuts
 abbr cfx 'snvim ~/.xinitrc'
 abbr cfish 'nvim ~/.config/fish/config.fish'
 abbr cfali 'nvim ~/.config/fish/aliases.fish'
@@ -17,9 +17,15 @@ abbr cflf 'nvim ~/.config/lf/lfrc'
 # Helpers
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'
 abbr src 'source ~/.config/fish/config.fish'
+abbr makins 'sudo make && sudo make clean install'
+
 
 # Extended defaults
 alias cat 'pygmentize -g -O style=colorful,lineos=1'
+alias ls 'exa -l -g --icons'
+alias lla 'll -a'
+alias tree 'll --tree --level=2 -a'
+alias ranger 'lf' # old habit
 
 # Tmux
 abbr xtm 'pkill -f tmux'
@@ -32,6 +38,21 @@ abbr gau 'git add -u'
 abbr gaa 'git add --all'
 abbr cm 'git commit -m ""'
 abbr co 'git checkout'
+
+# Arch
+alias pacman 'sudo pacman'
+abbr pupg 'pacman -Syu'
+abbr yupg 'yay -Syu'
+abbr pupd 'pacman -Sy'
+abbr yupd 'yay -Sy'
+abbr pins 'pacman -S'
+abbr yins 'yay -S'
+abbr prm 'pacman -R'
+abbr yrm 'yay -R'
+abbr pun 'pacman -Rcsn'
+abbr yun 'yay -Rcsn'
+abbr pclean 'pacman -Sc'
+abbr yclean 'yay -Sc'
 
 # Misc
 alias weather 'curl wttr.in/Copenhagen'

@@ -1,7 +1,10 @@
 let mapleader = ","
+set encoding=UTF-8
 
 set title
 set path+=**                    " searches current directory recursively
+set wildignore+=*/node_modules/*
+set re=1
 
 set nocompatible
 set showcmd                     " show current command
@@ -10,10 +13,16 @@ set showmode                    " show current mode
 set tabstop=4 softtabstop=4     " sets tabs equal to 4 spaces
 set shiftwidth=4                " sets shift width equals to 4 spaces
 set smartindent                 " attempts to properly indent
+set autoindent
+set expandtab
+set nowrap
+set backspace=start,eol,indent
+set foldmethod=marker
 
 filetype plugin on
 syntax on
 
+set cursorline
 set number                      " show line numbers
 set relativenumber              " show line numbers relative to the cursor position
 
@@ -35,19 +44,25 @@ set clipboard+=unnamedplus      " sets the clipboard so that you can pase stuff 
 set complete+=kspell            " auto complete with spellcheck
 set completeopt=menuone,longest " auto complete menu
 set termguicolors
+set winblend=0
+set wildoptions=pum
+set pumblend=5
+set background=dark
 
+" Performance
+set updatetime=750
+set lazyredraw                  " Don't redraw while executing macros
 
 " PLUGINS
 call plug#begin()
 
-" Status bar
+" TODO: change to lua?
+Plug 'nathom/filetype.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-scripts/AutoComplPop'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'dag/vim-fish'
 Plug 'chriskempson/base16-vim'
@@ -91,7 +106,7 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>0
 inoremap {;<CR> {<CR>};<ESC>0
 
-" Move to previous/next
+" move to previous/next
 nnoremap <silent>    <S-,> :BufferPrevious<CR>
 nnoremap <silent>    <S-.> :BufferNext<CR>
 
@@ -113,3 +128,21 @@ noremap <silent> <C-t>6 6gt
 noremap <silent> <C-t>7 7gt
 noremap <silent> <C-t>8 8gt
 noremap <silent> <C-t>9 9gt
+
+" File types "{{{
+" ---------------------------------------------------------------------
+" JavaScript
+au BufNewFile,BufRead *.es6 setf javascript
+" TypeScript
+au BufNewFile,BufRead *.tsx setf typescriptreact
+" Markdown
+au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.mdx set filetype=markdown
+" Fish
+au BufNewFile,BufRead *.fish set filetype=fish
+
+set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
+
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+
+"}}}

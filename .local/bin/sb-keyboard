@@ -1,0 +1,9 @@
+
+#!/bin/sh
+
+
+flagIcon="  DK"
+[ "$(setxkbmap -query | grep "us")" ] && flagIcon="  US"
+
+
+echo "$flagIcon"

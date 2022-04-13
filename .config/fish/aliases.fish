@@ -2,13 +2,14 @@
 # Configurations
 alias config '/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
-abbr cfx 'nvim ~/.xinitrc'
-abbr cfish 'sudo nvim ~/.config/fish/config.fish'
+
+abbr cfx 'snvim ~/.xinitrc'
+abbr cfish 'nvim ~/.config/fish/config.fish'
 abbr cfali 'nvim ~/.config/fish/aliases.fish'
-abbr cfx 'nvim ~/.xinitrc'
-abbr cfpic 'sudo nvim ~/.config/picom/picom.conf'
-abbr cfkit 'sudo nvim ~/.config/kitty/kitty.conf'
-abbr cfas 'sudo nvim ~/.local/share/dwm/autostart.sh'
+abbr cfx 'snvim ~/.xinitrc'
+abbr cfpic 'snvim ~/.config/picom/picom.conf'
+abbr cfkit 'nvim ~/.config/kitty/kitty.conf'
+abbr cfas 'snvim ~/.local/share/dwm/autostart.sh'
 abbr cfvi 'nvim ~/.config/nvim/init.vim'
 abbr cftm 'nvim ~/.config/tmux/tmux.conf'
 abbr cflf 'nvim ~/.config/lf/lfrc'
@@ -19,7 +20,6 @@ abbr src 'source ~/.config/fish/config.fish'
 
 # Extended defaults
 alias cat 'pygmentize -g -O style=colorful,lineos=1'
-alias ls 'logo-ls' # https://aur.archlinux.org/packages/logo-ls
 
 # Tmux
 abbr xtm 'pkill -f tmux'
@@ -39,3 +39,4 @@ alias power 'sudo sh ~/.local/bin/power.sh'
 
 # Programs
 alias vim 'nvim'
+alias snvim 'sudo -E -s nvim' # launch vim in sudo but preserve env config

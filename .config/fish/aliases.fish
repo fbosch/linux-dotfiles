@@ -36,6 +36,7 @@ abbr atm 'tmux attach-session -t'
 
 # Git
 abbr g 'git'
+abbr gs 'git status'
 abbr gau 'git add -u'
 abbr gaa 'git add --all'
 abbr cm 'git commit -m ""'

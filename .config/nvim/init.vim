@@ -1,3 +1,6 @@
+:lua require("plugins")
+:lua require("nvim-tree").setup()
+
 let mapleader = ","
 set encoding=UTF-8
 
@@ -20,6 +23,7 @@ set backspace=start,eol,indent
 set foldmethod=marker
 
 filetype plugin on
+set synmaxcol=200
 syntax on
 
 set cursorline
@@ -53,36 +57,20 @@ set background=dark
 set updatetime=750
 set lazyredraw                  " Don't redraw while executing macros
 
-" PLUGINS
-call plug#begin()
-
-" TODO: change to lua?
-Plug 'nathom/filetype.nvim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'romgrk/barbar.nvim'
-Plug 'scrooloose/nerdtree'
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'dag/vim-fish'
-Plug 'chriskempson/base16-vim'
-Plug 'godlygeek/tabular'
-Plug 'VebbNix/lf-vim'
-
-call plug#end()
-
 colorscheme base16-black-metal-burzum
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='minimalist'
 
-nnoremap <silent> <C-e> :NERDTreeToggle<CR>
-
+nnoremap <silent> <C-e> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
 
 augroup autocommands
 	" remove trailing whitespace on save
 	autocmd BufWritePre * %s/\s\+$//e
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 augroup END
 
 " remap split navigation to just CTRL + hjkl
@@ -100,7 +88,7 @@ noremap <silent> <C-Down> :resize +3<CR>
 " automatically close brackets and parenthesis and place cursor inside
 inoremap " ""<left>
 inoremap ' ''<left>
-inoremap ( ()<left>
+" inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>0

@@ -6,6 +6,7 @@ abbr cfr 'config remove'
 abbr cfs 'config status'
 
 # Config Shortcuts
+abbr cali 'cat ~/.config/fish/aliases.fish'
 abbr cfx 'snvim ~/.xinitrc'
 abbr cfish 'nvim ~/.config/fish/config.fish'
 abbr cfali 'nvim ~/.config/fish/aliases.fish'
@@ -21,7 +22,6 @@ abbr cflf 'nvim ~/.config/lf/lfrc'
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'
 abbr src 'source ~/.config/fish/config.fish'
 abbr makins 'sudo make && sudo make clean install'
-
 
 # Extended defaults
 alias cat 'pygmentize -g -O style=colorful,lineos=1'
@@ -63,4 +63,5 @@ alias power 'sudo sh ~/.local/bin/power.sh'
 # Programs
 alias vim 'nvim'
 abbr v 'nvim'
+abbr kssh 'kitty +kitten ssh'
 alias snvim 'sudo -E -s nvim' # launch vim in sudo but preserve env config

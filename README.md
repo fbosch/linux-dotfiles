@@ -1,6 +1,5 @@
 # Dotfiles
 
-
 ## Installation
 
 * Add the following alias to your shell config:
@@ -12,15 +11,17 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 ```sh
 git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
 ```
+## Shell
 
-___
+* [fish](https://fishshell.com/)
+* [starship](https://starship.rs/)
 
-### Credits
-Inspiration, resources and dotfiles
 
-* [Repository Structure](https://www.atlassian.com/git/tutorials/dotfiles)
-* [craftzdog](https://github.com/craftzdog/dotfiles-public)
-* [Luke Smith](https://github.com/LukeSmithxyz/voidrice)
+## Desktop Environment
+
+* [DWM](https://github.com/fbosch/dwm)
+* [dmenu](https://github.com/fbosch/dmenu)
+* [dwmblocks](https://github.com/fbosch/dwmblocks)
 
 ```
                    -`
@@ -44,3 +45,12 @@ Inspiration, resources and dotfiles
  .`                                 `/
 
 ```
+___
+
+### Credits
+Inspiration, resources and dotfiles
+
+* [Repository Structure](https://www.atlassian.com/git/tutorials/dotfiles)
+* [craftzdog](https://github.com/craftzdog/dotfiles-public)
+* [LukeSmithxyz](https://github.com/LukeSmithxyz/voidrice)
+* [dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async)

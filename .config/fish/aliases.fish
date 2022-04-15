@@ -15,6 +15,7 @@ abbr cfpic 'snvim ~/.config/picom/picom.conf'
 abbr cfkit 'nvim ~/.config/kitty/kitty.conf'
 abbr cfas 'snvim ~/.local/share/dwm/autostart.sh'
 abbr cfvi 'nvim ~/.config/nvim/init.vim'
+abbr cfvp 'nvim ~/.config/nvim/lua/plugins.lua'
 abbr cftm 'nvim ~/.config/tmux/tmux.conf'
 abbr cflf 'nvim ~/.config/lf/lfrc'
 

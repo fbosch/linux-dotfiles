@@ -1,13 +1,8 @@
+. ~/.config/fish/profile.fish
 . ~/.config/fish/aliases.fish
 
 set fish_greeting
 
-set TERMINAL kitty
-set EDITOR nvim
-set VISUAL nvim
-set VIDEO mpv
-set IMAGE sxiv
-set WM dwm
 
 # Custom Function for a sudo !! replacement
 function sudo --description "replacement for 'sudo !!' command to run last command using sudo"

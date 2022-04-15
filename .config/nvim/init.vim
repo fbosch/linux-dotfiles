@@ -29,7 +29,6 @@ syntax on
 set cursorline
 set number                      " show line numbers
 set relativenumber              " show line numbers relative to the cursor position
-
 set nowrap                      " do not allow lines to wrap
 
 set ignorecase                  " ignore case when searching
@@ -37,7 +36,6 @@ set smartcase                   " turns on case sensitive search when letters ar
 set incsearch                   " sets incremental search
 
 set scrolloff=8                 " start scrolling the page when the cursor is # lines from the bottom
-
 set encoding=utf-8
 
 set nohlsearch                  " turns off highlighting after enter is pressed when searching
@@ -56,22 +54,27 @@ set background=dark
 " Performance
 set updatetime=750
 set lazyredraw                  " Don't redraw while executing macros
+set ttyfast
 
+" Theme
 colorscheme base16-black-metal-burzum
-
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='minimalist'
+let g:Hexokinase_highlighters = ['virtual']
 
-nnoremap <silent> <C-e> :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
 
 augroup autocommands
 	" remove trailing whitespace on save
 	autocmd BufWritePre * %s/\s\+$//e
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 augroup END
+
+" Keybinds
+nnoremap <silent> <C-e> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+nnoremap <leader>c :HexokinaseToggle<CR>
 
 " remap split navigation to just CTRL + hjkl
 nnoremap <C-h> <C-w>h
@@ -88,7 +91,7 @@ noremap <silent> <C-Down> :resize +3<CR>
 " automatically close brackets and parenthesis and place cursor inside
 inoremap " ""<left>
 inoremap ' ''<left>
-" inoremap ( ()<left>
+inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>0
@@ -97,6 +100,12 @@ inoremap {;<CR> {<CR>};<ESC>0
 " move to previous/next
 nnoremap <silent>    <S-,> :BufferPrevious<CR>
 nnoremap <silent>    <S-.> :BufferNext<CR>
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 " tabs
 nnoremap th  :tabfirst<CR>

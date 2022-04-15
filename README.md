@@ -11,15 +11,16 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 ```sh
 git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
 ```
-## Shell
+## Terminal
 
 * [fish](https://fishshell.com/)
 * [starship](https://starship.rs/)
-
+* [kitty](https://sw.kovidgoyal.net/kitty/)
+* [tmux](https://github.com/tmux/tmux)
 
 ## Desktop Environment
 
-* [DWM](https://github.com/fbosch/dwm)
+* [dwm](https://github.com/fbosch/dwm)
 * [dmenu](https://github.com/fbosch/dmenu)
 * [dwmblocks](https://github.com/fbosch/dwmblocks)
 

@@ -3,14 +3,23 @@ return require("packer").startup({
         use({
             "nathom/filetype.nvim",
             "romgrk/barbar.nvim",
-            "vim-airline/vim-airline",
-            "vim-airline/vim-airline-themes",
             "neovim/nvim-lspconfig",
             "lewis6991/impatient.nvim",
             "chriskempson/base16-vim",
             "lukas-reineke/indent-blankline.nvim",
             "dag/vim-fish",
             "norcalli/nvim-terminal.lua",
+            "HerringtonDarkholme/yats.vim",
+            {
+                "vim-airline/vim-airline",
+                requires = {
+                    "vim-airline/vim-airline-themes"
+                },
+                config = function()
+                    vim.g.airline_powerline_fonts=1
+                    vim.g.airline_theme="minimalist"
+                end
+            },
             {
                 "rrethy/vim-hexokinase",
                 run = "make hexokinase",
@@ -22,10 +31,22 @@ return require("packer").startup({
                 end
             },
             {
+                "kien/ctrlp.vim",
+                config = function()
+                    vim.g.ctrlp_map = "<c-p>"
+                    vim.g.ctrlp_cmd = "CtrlP"
+                    vim.g.ctrlp_working_path_mode = "cra"
+                    vim.g.ctrlp_user_command = "fd . %s --type file"
+                end
+            },
+            {
                 "kyazdani42/nvim-tree.lua",
                 requires = {
                     'kyazdani42/nvim-web-devicons',
                 },
+                config = function()
+                    require('nvim-tree').setup()
+                end
             },
             {
                 "ibhagwan/fzf-lua",
@@ -48,6 +69,21 @@ return require("packer").startup({
                         highlight = { enable = true },
                         indent = { enable = true }
                     })
+                end
+            },
+            {
+                "neoclide/coc.nvim",
+                branch = "release",
+                config = function()
+                    vim.g.coc_global_file_extensions = {
+                        "coc-css",
+                        "coc-eslint",
+                        "coc-prettier",
+                        "coc-html",
+                        "coc-json",
+                        "coc-lua",
+                        "coc-tsserver",
+                    }
                 end
             }
         })

@@ -1,12 +1,12 @@
 :lua require("plugins")
-:lua require("nvim-tree").setup()
+filetype plugin on
 
-let mapleader = ","
 set encoding=UTF-8
+let mapleader = ","
 
 set title
 set path+=**                    " searches current directory recursively
-set wildignore+=*/node_modules/*
+set wildignore+=*/node_modules/*,*/.npm/*,*.cache*,*go*,*.swp*,*/tmp/*,*/Caches/*,*log*,*.dat*,*.kbx*,*.zip*
 set re=1
 
 set nocompatible
@@ -22,7 +22,6 @@ set nowrap
 set backspace=start,eol,indent
 set foldmethod=marker
 
-filetype plugin on
 set synmaxcol=200
 syntax on
 
@@ -58,16 +57,14 @@ set ttyfast
 
 " Theme
 colorscheme base16-black-metal-burzum
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='minimalist'
-let g:Hexokinase_highlighters = ['virtual']
 
 
 augroup autocommands
 	" remove trailing whitespace on save
 	autocmd BufWritePre * %s/\s\+$//e
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+    autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 augroup END
 
 " Keybinds
@@ -92,14 +89,15 @@ noremap <silent> <C-Down> :resize +3<CR>
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
-inoremap [ []<left>
+
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>0
 inoremap {;<CR> {<CR>};<ESC>0
 
 " move to previous/next
-nnoremap <silent>    <S-,> :BufferPrevious<CR>
-nnoremap <silent>    <S-.> :BufferNext<CR>
+nnoremap <silent>    <S-h> :BufferPrevious<CR>
+nnoremap <silent>    <S-l> :BufferNext<CR>
+nnoremap <silent>    <S-d> :BufferWipeout<CR>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>

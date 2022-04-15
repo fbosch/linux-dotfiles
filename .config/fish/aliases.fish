@@ -1,5 +1,5 @@
 
-# Configurations
+# Configuration
 alias config '/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 abbr cfa 'config add'
 abbr cfr 'config remove'
@@ -18,6 +18,9 @@ abbr cfvi 'nvim ~/.config/nvim/init.vim'
 abbr cfvp 'nvim ~/.config/nvim/lua/plugins.lua'
 abbr cftm 'nvim ~/.config/tmux/tmux.conf'
 abbr cflf 'nvim ~/.config/lf/lfrc'
+
+# Directory shortcuts
+abbr prj 'cd ~/Projects'
 
 # Helpers
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'

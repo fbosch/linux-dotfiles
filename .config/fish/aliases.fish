@@ -26,6 +26,7 @@ abbr prj 'cd ~/Projects'
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'
 abbr src 'source ~/.config/fish/config.fish'
 abbr makins 'sudo make && sudo make clean install'
+abbr cl 'clear'
 
 # Extended defaults
 alias cat 'pygmentize -g -O style=colorful,lineos=1'

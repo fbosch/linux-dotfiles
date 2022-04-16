@@ -43,7 +43,7 @@ return require("packer").startup({
                     vim.g.ctrlp_map = "<c-p>"
                     vim.g.ctrlp_cmd = "CtrlP"
                     vim.g.ctrlp_working_path_mode = "cra"
-                    vim.g.ctrlp_user_command = "fd . %s --type file"
+                    vim.g.ctrlp_user_command = "fd . %s --type file --threads=4 --color=never"
                 end
             },
             {

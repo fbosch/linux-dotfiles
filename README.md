@@ -27,7 +27,7 @@ git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
 
 ## Toolkit
 
-* [peco](https://github.com/peco/peco) - used for [directory navigation](./config/fish/functions/peco_change_directory.fish) and [querying the command history](,/config/fish/functions/peco_select_history.fish).
+* [peco](https://github.com/peco/peco) - used for [directory navigation](/.config/fish/functions/peco_change_directory.fish) and [querying the command history](/.config/fish/functions/peco_select_history.fish).
 * [fd](https://github.com/sharkdp/fd) - faster alternative to the native `find` (used in peco scripts and [`ctrlp`](https://github.com/kien/ctrlp.vim#basic-options=) for vim)
 * [z](https://github.com/jethrokuan/z) - super useful for quick directory navigation
 * [lf](https://github.com/gokcehan/lf) - terminal file manager

@@ -23,8 +23,22 @@ git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
 * [dwm](https://github.com/fbosch/dwm)
 * [dmenu](https://github.com/fbosch/dmenu)
 * [dwmblocks](https://github.com/fbosch/dwmblocks)
+* [picom](https://wiki.archlinux.org/title/Picom)
+
+## Toolkit
+
+* [peco](https://github.com/peco/peco) - used for [directory navigation](./config/fish/functions/peco_change_directory.fish) and [querying the command history](,/config/fish/functions/peco_select_history.fish).
+* [fd](https://github.com/sharkdp/fd) - faster alternative to the native `find` (used in peco scripts and [`ctrlp`](https://github.com/kien/ctrlp.vim#basic-options=) for vim)
+* [z](https://github.com/jethrokuan/z) - super useful for quick directory navigation
+* [lf](https://github.com/gokcehan/lf) - terminal file manager
+* [btop](https://github.com/aristocratos/btop) - a nice looking `htop` alternative
+* [sxiv](https://wiki.archlinux.org/title/Sxiv) - minimalistic image viewer
+* [feh](https://wiki.archlinux.org/title/feh) - primarily used to set wallpapers
+* [gopreload](https://wiki.archlinux.org/title/Preload) - preloads files into ram for faster start-up times
 
 ```
+
+
                    -`
                   .o+`
                  `ooo/                   OS: Arch Linux x86_64

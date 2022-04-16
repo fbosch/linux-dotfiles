@@ -1,21 +1,24 @@
 # https://github.com/craftzdog/dotfiles-public/blob/master/.config/fish/functions/peco_change_directory.fish
 function _peco_change_directory
   if [ (count $argv) ]
-    peco --layout=top-down --query "$argv "|perl -pe 's/([ ()])/\\\\$1/g'|read foo
+    peco --layout=bottom-up --query "$argv "|perl -pe 's/([ ()])/\\\\$1/g'|read foo
   else
-    peco --layout=top-down |perl -pe 's/([ ()])/\\\\$1/g'|read foo
+    peco --layout=bottom-up |perl -pe 's/([ ()])/\\\\$1/g'|read foo
   end
-  if test -d $foo
-    builtin cd $foo
-  end
-  commandline -r ''
-  commandline -f repaint
+  if [ $foo ]
+        builtin cd $foo
+        commandline -r ''
+        commandline -f repaint
+    else
+        commandline -r ''
+    end
 end
 
 function peco_change_directory
   begin
     echo $HOME/.config
     ghq list -p
-    ls -U --color=never -ad -1 */|perl -pe "s#^#$PWD/#"|grep -v \.git
-  end | sed -e 's/\/$//' | awk '!a[$0]++' | _peco_change_directory $argv
+    fd --color=never --full-path "$HOME/Projects" --type d --threads=2
+    fd --color=never --full-path "$PWD" --maxdepth 1 --type d --threads=4
+  end | sed -e 's/\/$//g' | awk '!a[$0]++' | _peco_change_directory $argv
 end

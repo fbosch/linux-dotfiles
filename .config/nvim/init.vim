@@ -11,7 +11,7 @@ set re=1
 
 set nocompatible
 set showcmd                     " show current command
-set showmode                    " show current mode
+set noshowmode
 
 set tabstop=4 softtabstop=4     " sets tabs equal to 4 spaces
 set shiftwidth=4                " sets shift width equals to 4 spaces
@@ -67,6 +67,10 @@ augroup autocommands
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 augroup END
 
+if !has('gui_running')
+  set t_Co=256
+endif
+
 " Keybinds
 nnoremap <silent> <C-e> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
@@ -97,7 +101,7 @@ inoremap {;<CR> {<CR>};<ESC>0
 " move to previous/next
 nnoremap <silent>    <S-h> :BufferPrevious<CR>
 nnoremap <silent>    <S-l> :BufferNext<CR>
-nnoremap <silent>    <S-d> :BufferWipeout<CR>
+nnoremap <silent>    <S-d> :Sayonara<CR>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>

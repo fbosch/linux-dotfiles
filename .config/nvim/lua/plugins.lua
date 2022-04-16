@@ -1,6 +1,11 @@
 return require("packer").startup({
     function(use)
         use({
+            "tpope/vim-rhubarb",
+            "tpope/vim-fugitive",
+            "tpope/vim-commentary",
+            "tpope/vim-surround",
+            "tpope/vim-vinegar",
             "nathom/filetype.nvim",
             "romgrk/barbar.nvim",
             "neovim/nvim-lspconfig",
@@ -10,14 +15,16 @@ return require("packer").startup({
             "dag/vim-fish",
             "norcalli/nvim-terminal.lua",
             "HerringtonDarkholme/yats.vim",
+            "mhinz/vim-sayonara",
             {
-                "vim-airline/vim-airline",
-                requires = {
-                    "vim-airline/vim-airline-themes"
-                },
+                "itchyny/lightline.vim",
                 config = function()
-                    vim.g.airline_powerline_fonts=1
-                    vim.g.airline_theme="minimalist"
+                    vim.g.lightline = {
+                        colorscheme = "wombat",
+                        component_function = {
+                            gitbranch = 'FugitiveHead'
+                        }
+                    }
                 end
             },
             {
@@ -62,7 +69,7 @@ return require("packer").startup({
                 "nvim-treesitter/nvim-treesitter",
                 run = ":TSUpdate",
                 config = function()
-                    require('nvim-treesitter.configs').setup({
+                    require("nvim-treesitter.configs").setup({
                         autopairs = { enable = true },
                         autotag = { enable = true },
                         ensure_installed = 'all',

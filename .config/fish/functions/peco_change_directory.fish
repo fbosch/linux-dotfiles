@@ -18,7 +18,7 @@ function peco_change_directory
   begin
     echo $HOME/.config
     ghq list -p
-    fd --color=never --full-path "$HOME/Projects" --maxdepth 1 --type d --threads=2
-    fd --color=never --full-path "$PWD" --maxdepth 1 --type d --threads=4
+    fd --color=never . $HOME/Projects --maxdepth 1 --type d --threads=2
+    fd --color=never . $PWD --maxdepth 1 --type d --threads=4
   end | sed -e 's/\/$//g' | awk '!a[$0]++' | _peco_change_directory $argv
 end

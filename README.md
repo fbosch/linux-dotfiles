@@ -31,7 +31,9 @@ git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
 * [fd](https://github.com/sharkdp/fd) - faster alternative to the native `find` (used in peco scripts and [`ctrlp`](https://github.com/kien/ctrlp.vim#basic-options=) for vim)
 * [z](https://github.com/jethrokuan/z) - super useful for quick directory navigation
 * [lf](https://github.com/gokcehan/lf) - terminal file manager
+* [pj](https://github.com/oh-my-fish/plugin-pj) - quick navigation to project directories
 * [btop](https://github.com/aristocratos/btop) - a nice looking `htop` alternative
+* [icdiff](https://github.com/jeffkaufman/icdiff) - improved colored diff with columns
 * [sxiv](https://wiki.archlinux.org/title/Sxiv) - minimalistic image viewer
 * [feh](https://wiki.archlinux.org/title/feh) - primarily used to set wallpapers
 * [gopreload](https://wiki.archlinux.org/title/Preload) - preloads files into ram for faster start-up times

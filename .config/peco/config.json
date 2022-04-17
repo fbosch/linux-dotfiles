@@ -1,5 +1,5 @@
 {
-    "Prompt":"",
+    "Prompt":"🔎",
     "Use265Color":true,
     "Keymap": {
         "C-k":"peco.ScrollPageUp",

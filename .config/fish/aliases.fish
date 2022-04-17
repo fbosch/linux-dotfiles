@@ -11,6 +11,7 @@ abbr cfx 'snvim ~/.xinitrc'
 abbr cfish 'nvim ~/.config/fish/config.fish'
 abbr cfali 'nvim ~/.config/fish/aliases.fish'
 abbr cfx 'snvim ~/.xinitrc'
+abbr cfst 'nvim ~/.config/starship.toml'
 abbr cfpic 'snvim ~/.config/picom/picom.conf'
 abbr cfkit 'nvim ~/.config/kitty/kitty.conf'
 abbr cfas 'snvim ~/.local/share/dwm/autostart.sh'
@@ -21,6 +22,8 @@ abbr cflf 'nvim ~/.config/lf/lfrc'
 
 # Directory shortcuts
 abbr prj 'cd ~/Projects'
+abbr pjo 'pj open '
+
 
 # Helpers
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'

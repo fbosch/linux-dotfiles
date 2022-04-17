@@ -1,8 +1,11 @@
 
+format = "$character"
+right_format = """$all"""
+
 [character]
-success_symbol = "[↳ ](bold green)"
-error_symbol = "[x](bold red)"
-vicmd_symbol = "[<](bold green)"
+success_symbol = "[ᚠᛒᛒ ](bold green)[᛫](fg:240)"
+error_symbol = "[ᛖᚱᚱ ](bold fg:88)[᛫](fg:196)"
+vicmd_symbol = "[ᚹᛁ ᛫](bold green)"
 
 [python]
 disabled = true
@@ -12,6 +15,8 @@ added_style = "bold blue"
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 
 [directory]
-truncation_length = 8
+truncation_length = 6
 truncation_symbol = "…/"
 
+[nodejs]
+format = '[](bold fg:41) via $version'

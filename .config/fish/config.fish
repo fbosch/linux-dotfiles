@@ -32,11 +32,11 @@ function fish_user_keybindings
   fish_vi_key_bindings
 end
 
+bind -M insert \cc kill-whole-line repaint
 bind \co 'lfcd' # Change directories when pressing CTRL+O
 # peco
 bind \cr 'peco_select_history' # Bind for peco select history to Ctrl+R
 bind \cf 'peco_change_directory' # Bind for peco change directory to Ctrl+F
-
 
 base16-black-metal-burzum
 starship init fish | source

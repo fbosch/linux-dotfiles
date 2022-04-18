@@ -21,9 +21,10 @@ set expandtab
 set nowrap
 set backspace=start,eol,indent
 set foldmethod=marker
+set foldexpr=nvim_treesitter#foldexpr()
 
 set synmaxcol=200
-syntax on
+" syntax on
 
 set cursorline
 set number                      " show line numbers
@@ -60,8 +61,12 @@ colorscheme base16-black-metal-burzum
 
 
 augroup autocommands
-	" remove trailing whitespace on save
-	autocmd BufWritePre * %s/\s\+$//e
+    " Remove ALL autocommands for the current group.
+	autocmd!
+    " Remove trailing whitespace on save
+    autocmd BufWritePre * %s/\s\+$//e
+    autocmd BufEnter * :syntax sync fromstart
+    autocmd BufRead,BufNewFile .{eslint,babel,stylelint,prettier}rc set ft=json5
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear

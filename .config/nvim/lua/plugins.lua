@@ -1,6 +1,7 @@
 return require("packer").startup({
     function(use)
         use({
+            "wbthomason/packer.nvim",
             "tpope/vim-rhubarb",
             "tpope/vim-fugitive",
             "tpope/vim-commentary",
@@ -82,7 +83,8 @@ return require("packer").startup({
                 "neoclide/coc.nvim",
                 branch = "release",
                 config = function()
-                    vim.g.coc_global_file_extensions = {
+                    vim.g.coc_global_extensions = {
+                        "coc-diagnostic",
                         "coc-css",
                         "coc-eslint",
                         "coc-prettier",

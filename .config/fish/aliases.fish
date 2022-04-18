@@ -65,6 +65,10 @@ abbr yun 'yay -Rcsn'
 abbr pclean 'pacman -Sc'
 abbr yclean 'yay -Sc'
 
+# Webdev
+alias ya 'yarn add'
+alias yr 'yarn remove'
+
 # Misc
 alias weather 'curl wttr.in/Copenhagen'
 alias power 'sudo sh ~/.local/bin/power.sh'

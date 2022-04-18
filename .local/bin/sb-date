@@ -1,0 +1,45 @@
+#!/bin/sh
+
+clockIcon=""
+
+case "$(date +%I)" in
+  "01")
+    clockIcon=""
+  ;;
+  "02")
+    clockIcon=""
+  ;;
+  "03")
+    clockIcon=""
+  ;;
+  "04")
+    clockIcon=""
+  ;;
+  "05")
+    clockIcon=""
+  ;;
+  "06")
+    clockIcon=""
+  ;;
+  "07")
+    clockIcon=""
+  ;;
+  "08")
+    clockIcon=""
+  ;;
+  "09")
+    clockIcon=""
+  ;;
+  "10")
+    clockIcon=""
+  ;;
+  "11")
+    clockIcon=""
+  ;;
+  "12")
+    clockIcon=""
+  ;;
+esac
+
+
+echo " $(date '+%d %b ') $clockIcon $(date '+%H:%M %p') "

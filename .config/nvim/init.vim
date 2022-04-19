@@ -1,4 +1,4 @@
-:lua require("plugins")
+::lua require("plugins")
 filetype plugin on
 
 set encoding=UTF-8
@@ -24,7 +24,7 @@ set foldmethod=marker
 set foldexpr=nvim_treesitter#foldexpr()
 
 set synmaxcol=200
-" syntax on
+syntax on
 
 set cursorline
 set number                      " show line numbers
@@ -107,6 +107,13 @@ inoremap {;<CR> {<CR>};<ESC>0
 nnoremap <silent>    <S-h> :BufferPrevious<CR>
 nnoremap <silent>    <S-l> :BufferNext<CR>
 nnoremap <silent>    <S-d> :Sayonara<CR>
+
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>

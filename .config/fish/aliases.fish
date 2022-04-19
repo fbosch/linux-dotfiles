@@ -19,6 +19,7 @@ abbr cfvi 'nvim ~/.config/nvim/init.vim'
 abbr cfvp 'nvim ~/.config/nvim/lua/plugins.lua'
 abbr cftm 'nvim ~/.config/tmux/tmux.conf'
 abbr cflf 'nvim ~/.config/lf/lfrc'
+abbr cfdu 'nvim ~/.config/dunst/dunstrc'
 
 # Directory shortcuts
 abbr prj 'cd ~/Projects'
@@ -71,7 +72,6 @@ alias yr 'yarn remove'
 
 # Misc
 alias weather 'curl wttr.in/Copenhagen'
-alias power 'sudo sh ~/.local/bin/power.sh'
 
 # Programs
 alias vim 'nvim'

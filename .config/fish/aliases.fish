@@ -25,7 +25,6 @@ abbr cfdu 'nvim ~/.config/dunst/dunstrc'
 abbr prj 'cd ~/Projects'
 abbr pjo 'pj open '
 
-
 # Helpers
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'
 abbr src 'source ~/.config/fish/config.fish'
@@ -47,9 +46,9 @@ abbr atm 'tmux attach-session -t'
 abbr g 'git'
 abbr gs 'git status'
 abbr gau 'git add -u'
+abbr gco 'git checkout'
 abbr gaa 'git add --all'
-abbr cm 'git commit -m ""'
-abbr co 'git checkout'
+abbr cm 'commit -m ""'
 
 # Arch
 alias pacman 'sudo pacman'

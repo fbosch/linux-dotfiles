@@ -11,12 +11,12 @@ return require("packer").startup({
             "romgrk/barbar.nvim",
             "neovim/nvim-lspconfig",
             "lewis6991/impatient.nvim",
-            "chriskempson/base16-vim",
             "lukas-reineke/indent-blankline.nvim",
             "dag/vim-fish",
             "norcalli/nvim-terminal.lua",
             "HerringtonDarkholme/yats.vim",
             "mhinz/vim-sayonara",
+            "RRethy/nvim-base16",
             {
                 "nvim-telescope/telescope.nvim",
                 requires = {  "nvim-telescope/telescope-file-browser.nvim" },
@@ -29,8 +29,7 @@ return require("packer").startup({
                                 preview_cutoff = 300
                             }
                         },
-                        extensions = {
-                            file_browser = {
+                        extensions = { file_browser = {
                                 theme = "dropdown"
                             },
                         },
@@ -59,6 +58,16 @@ return require("packer").startup({
                 end
             },
             {
+                "nvim-lualine/lualine.nvim",
+                requires = { "kyazdani42/nvim-web-devicons", opt = true },
+                config = function()
+                    require("lualine").setup({
+                        options = { theme = "seoul256" }
+                    })
+                end
+
+            },
+            {
                 "startup-nvim/startup.nvim",
                 requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
                 config = function()
@@ -66,17 +75,6 @@ return require("packer").startup({
                         theme = "startup_theme"
                     })
 
-                end
-            },
-            {
-                "itchyny/lightline.vim",
-                config = function()
-                    vim.g.lightline = {
-                        colorscheme = "wombat",
-                        component_function = {
-                            gitbranch = 'FugitiveHead'
-                        }
-                    }
                 end
             },
             {

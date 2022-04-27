@@ -98,12 +98,20 @@ return require("packer").startup({
                 end
             },
             {
+                "windwp/nvim-autopairs",
+                event = "InsertEnter",
+                config = function()
+                  require("nvim-autopairs").setup()
+                end
+            },
+            {
                 "kyazdani42/nvim-tree.lua",
                 requires = {
                     'kyazdani42/nvim-web-devicons',
                 },
                 config = function()
-                    require("nvim-tree").setup()
+                    require("nvim-tree").setup({
+                    })
                 end
             },
             {
@@ -142,6 +150,7 @@ return require("packer").startup({
                         "coc-json",
                         "coc-lua",
                         "coc-tsserver",
+                        "coc-svelte"
                     }
                 end
             }

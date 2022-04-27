@@ -13,8 +13,8 @@ set nocompatible
 set showcmd                     " show current command
 set noshowmode
 
-set tabstop=4 softtabstop=4     " sets tabs equal to 4 spaces
-set shiftwidth=4                " sets shift width equals to 4 spaces
+set tabstop=2 softtabstop=4     " sets tabs equal to 4 spaces
+set shiftwidth=2                " sets shift width equals to 4 spaces
 set smartindent                 " attempts to properly indent
 set autoindent
 set expandtab
@@ -94,25 +94,16 @@ noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize -3<CR>
 noremap <silent> <C-Down> :resize +3<CR>
 
-" automatically close brackets and parenthesis and place cursor inside
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>0
-inoremap {;<CR> {<CR>};<ESC>0
-
 " move to previous/next
 nnoremap <silent>    <S-h> :BufferPrevious<CR>
 nnoremap <silent>    <S-l> :BufferNext<CR>
 nnoremap <silent>    <S-d> :Sayonara<CR>
 
-
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>lg <cmd>Telescope live_grep<cr>
+nnoremap <leader>of <cmd>Telescope oldfiles<cr>
+nnoremap <leader>fb <cmd>Telescope file_browser<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Use ctrl-[hjkl] to select the active split!

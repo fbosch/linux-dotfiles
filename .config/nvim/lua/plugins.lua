@@ -1,4 +1,4 @@
-return require("packer").startup({
+  return require("packer").startup({
     function(use)
         use({
             "wbthomason/packer.nvim",
@@ -17,6 +17,17 @@ return require("packer").startup({
             "HerringtonDarkholme/yats.vim",
             "mhinz/vim-sayonara",
             "RRethy/nvim-base16",
+            "mg979/vim-visual-multi",
+            {
+              "mcchrish/zenbones.nvim",
+              requires = "rktjmp/lush.nvim"
+            },
+            {
+              "lewis6991/gitsigns.nvim",
+              config = function()
+                require('gitsigns').setup()
+              end
+            },
             {
                 "nvim-telescope/telescope.nvim",
                 requires = {  "nvim-telescope/telescope-file-browser.nvim" },
@@ -62,7 +73,7 @@ return require("packer").startup({
                 requires = { "kyazdani42/nvim-web-devicons", opt = true },
                 config = function()
                     require("lualine").setup({
-                        options = { theme = "seoul256" }
+                        options = { theme = "auto" }
                     })
                 end
 

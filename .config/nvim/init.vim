@@ -45,11 +45,6 @@ set clipboard+=unnamedplus      " sets the clipboard so that you can pase stuff 
 
 set complete+=kspell            " auto complete with spellcheck
 set completeopt=menuone,longest " auto complete menu
-set termguicolors
-set winblend=0
-set wildoptions=pum
-set pumblend=5
-set background=dark
 
 " Performance
 set updatetime=750
@@ -57,8 +52,14 @@ set lazyredraw                  " Don't redraw while executing macros
 set ttyfast
 
 " Theme
-colorscheme base16-black-metal-burzum
+set termguicolors
+set winblend=0
+set wildoptions=pum
+set pumblend=5
+set background=dark
 
+" colorscheme base16-black-metal-burzum
+colorscheme zenwritten
 
 augroup autocommands
     " Remove ALL autocommands for the current group.
@@ -75,6 +76,8 @@ augroup END
 if !has('gui_running')
   set t_Co=256
 endif
+
+
 
 " Keybinds
 nnoremap <silent> <C-e> :NvimTreeToggle<CR>

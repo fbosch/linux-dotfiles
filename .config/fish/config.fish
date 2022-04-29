@@ -38,5 +38,4 @@ bind \co 'lfcd' # Change directories when pressing CTRL+O
 bind \cr 'peco_select_history' # Bind for peco select history to Ctrl+R
 bind \cf 'peco_change_directory' # Bind for peco change directory to Ctrl+F
 
-# base16-grayscale-dark
 starship init fish | source

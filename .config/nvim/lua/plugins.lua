@@ -16,7 +16,6 @@
             "norcalli/nvim-terminal.lua",
             "HerringtonDarkholme/yats.vim",
             "mhinz/vim-sayonara",
-            "RRethy/nvim-base16",
             "mg979/vim-visual-multi",
             {
               "mcchrish/zenbones.nvim",

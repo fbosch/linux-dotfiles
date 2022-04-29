@@ -58,7 +58,6 @@ set wildoptions=pum
 set pumblend=5
 set background=dark
 
-" colorscheme base16-black-metal-burzum
 colorscheme zenwritten
 
 augroup autocommands

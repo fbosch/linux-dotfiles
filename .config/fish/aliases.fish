@@ -31,7 +31,7 @@ abbr src 'source ~/.config/fish/config.fish'
 abbr makins 'sudo make && sudo make clean install'
 abbr cl 'clear'
 abbr t 'yarn test'
-
+abbr mki 'sudo make && sudo make clean install'
 
 # Extended defaults
 alias cat 'pygmentize -g -O style=colorful,lineos=1'

@@ -76,8 +76,6 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-
-
 " Keybinds
 nnoremap <silent> <C-e> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>

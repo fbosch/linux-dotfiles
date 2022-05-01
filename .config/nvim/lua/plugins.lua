@@ -17,7 +17,7 @@
             "HerringtonDarkholme/yats.vim",
             "mhinz/vim-sayonara",
             "mg979/vim-visual-multi",
-              "McAuleyPenney/tidy.nvim",
+            "McAuleyPenney/tidy.nvim",
             {
               "mcchrish/zenbones.nvim",
               requires = "rktjmp/lush.nvim"

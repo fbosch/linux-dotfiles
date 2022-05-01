@@ -47,7 +47,7 @@ set complete+=kspell            " auto complete with spellcheck
 set completeopt=menuone,longest " auto complete menu
 
 " Performance
-set updatetime=750
+set updatetime=400
 set lazyredraw                  " Don't redraw while executing macros
 set ttyfast
 

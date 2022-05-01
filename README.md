@@ -2,43 +2,50 @@
 
 ## Installation
 
-* Add the following alias to your shell config:
+- Add the following alias to your shell config:
+
 ```sh
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 ```
 
-* Clone the repository
+- Clone the repository
+
 ```sh
 git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
 ```
+
 ## Terminal
 
-* [fish](https://fishshell.com/)
-* [starship](https://starship.rs/)
-* [kitty](https://sw.kovidgoyal.net/kitty/)
-* [tmux](https://github.com/tmux/tmux)
+- [fish](https://fishshell.com/)
+  - [fisher](https://github.com/jorgebucaran/fisher) - Plugin manager for fish
+  - [z](https://github.com/jethrokuan/z) - super useful for quick directory navigation
+- [starship](https://starship.rs/)
+- [kitty](https://sw.kovidgoyal.net/kitty/)
+- [tmux](https://github.com/tmux/tmux)
 
 ## Desktop Environment
 
-* [dwm](https://github.com/fbosch/dwm)
-* [dmenu](https://github.com/fbosch/dmenu)
-* [dwmblocks](https://github.com/fbosch/dwmblocks)
-* [picom](https://wiki.archlinux.org/title/Picom)
+- [dwm](https://github.com/fbosch/dwm)
+- [dmenu](https://github.com/fbosch/dmenu)
+- [dwmblocks](https://github.com/fbosch/dwmblocks)
+- [picom](https://wiki.archlinux.org/title/Picom)
 
 ## Toolkit
 
-* [peco](https://github.com/peco/peco) - used for [directory navigation](/.config/fish/functions/peco_change_directory.fish) and [querying the command history](/.config/fish/functions/peco_select_history.fish).
-* [fd](https://github.com/sharkdp/fd) - faster alternative to the native `find` (used in peco scripts and [`ctrlp`](https://github.com/kien/ctrlp.vim#basic-options=) for vim)
-* [z](https://github.com/jethrokuan/z) - super useful for quick directory navigation
-* [lf](https://github.com/gokcehan/lf) - terminal file manager
-* [pj](https://github.com/oh-my-fish/plugin-pj) - quick navigation to project directories
-* [btop](https://github.com/aristocratos/btop) - a nice looking `htop` alternative
-* [icdiff](https://github.com/jeffkaufman/icdiff) - improved colored diff with columns
-* [sxiv](https://wiki.archlinux.org/title/Sxiv) - minimalistic image viewer
-* [feh](https://wiki.archlinux.org/title/feh) - primarily used to set wallpapers
-* [gopreload](https://wiki.archlinux.org/title/Preload) - preloads files into ram for faster start-up times
+- [peco](https://github.com/peco/peco) - used for [directory navigation](/.config/fish/functions/peco_change_directory.fish) and [querying the command history](/.config/fish/functions/peco_select_history.fish).
+- [lf](https://github.com/gokcehan/lf) - terminal file manager
+- [exa](https://github.com/ogham/exa) - replacement for _ls_
+- [fd](https://github.com/sharkdp/fd) - replacement to the native `find` (used in peco scripts and [`ctrlp`](https://github.com/kien/ctrlp.vim#basic-options=) for vim)
+- [fkill-cli](https://github.com/sindresorhus/fkill-cli) - makes killing processes a nice experience
+- [pj](https://github.com/oh-my-fish/plugin-pj) - quick navigation to project directories
+- [btop](https://github.com/aristocratos/btop) - a nice looking `htop` alternative
+- [icdiff](https://github.com/jeffkaufman/icdiff) - improved colored diff with columns
+- [sxiv](https://wiki.archlinux.org/title/Sxiv) - minimalistic image viewer
+- [feh](https://wiki.archlinux.org/title/feh) - primarily used to set wallpapers
+- [gopreload](https://wiki.archlinux.org/title/Preload) - preloads files into ram for faster start-up times
+- [icdiff](https://github.com/jeffkaufman/icdiff) - colored diff tool
 
-```
+`````
 
 
                    -`
@@ -61,13 +68,15 @@ git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
  `++:.                           `-/+/
  .`                                 `/
 
-```
-___
+`````
+
+---
 
 ### Credits
+
 Inspiration, resources and dotfiles
 
-* [Repository Structure](https://www.atlassian.com/git/tutorials/dotfiles)
-* [craftzdog](https://github.com/craftzdog/dotfiles-public)
-* [LukeSmithxyz](https://github.com/LukeSmithxyz/voidrice)
-* [dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async)
+- [Repository Structure](https://www.atlassian.com/git/tutorials/dotfiles)
+- [craftzdog](https://github.com/craftzdog/dotfiles-public)
+- [LukeSmithxyz](https://github.com/LukeSmithxyz/voidrice)
+- [dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async)

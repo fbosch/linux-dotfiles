@@ -17,6 +17,7 @@ format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 [directory]
 truncation_length = 6
 truncation_symbol = "…/"
+read_only = "  "
 
 [nodejs]
 format = '[](bold fg:41) via $version'

@@ -35,9 +35,11 @@ abbr mki 'sudo make && sudo make clean install'
 
 # Extended defaults
 alias cat 'pygmentize -g -O style=colorful,lineos=1'
-alias ll 'exa -l -g --icons'
-alias lla 'll -a'
-alias tree 'll --tree --level=2 -a'
+alias ls 'exa --icons -F'
+alias l 'ls -l'
+alias la 'ls -a'
+alias lla 'ls -la'
+alias lt 'ls --tree'
 
 # Tmux
 abbr xtm 'pkill -f tmux'

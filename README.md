@@ -17,8 +17,8 @@ git clone --bare git@github.com:fbosch/dotfiles.git $HOME/.cfg
 ## Terminal
 
 - [fish](https://fishshell.com/)
-  - [fisher](https://github.com/jorgebucaran/fisher) - Plugin manager for fish
-  - [z](https://github.com/jethrokuan/z) - super useful for quick directory navigation
+  - [fisher](https://github.com/jorgebucaran/fisher) - plugin manager
+  - [z](https://github.com/jethrokuan/z) - quick directory navigation
 - [starship](https://starship.rs/)
 - [kitty](https://sw.kovidgoyal.net/kitty/)
 - [tmux](https://github.com/tmux/tmux)

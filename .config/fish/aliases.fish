@@ -26,6 +26,7 @@ abbr prj 'cd ~/Projects'
 abbr pjo 'pj open '
 
 # Helpers
+alias icat 'kitty +kitten icat'
 abbr mntnas 'sudo systemctl daemon-reload && sudo mount -a'
 abbr src 'source ~/.config/fish/config.fish'
 abbr makins 'sudo make && sudo make clean install'
@@ -72,9 +73,6 @@ abbr yclean 'yay -Sc'
 # Webdev
 alias ya 'yarn add'
 alias yr 'yarn remove'
-
-# Misc
-alias weather 'curl wttr.in/Copenhagen'
 
 # Programs
 alias vim 'nvim'

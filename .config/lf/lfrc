@@ -3,6 +3,6 @@ set icons true
 set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
 set hidden true
+set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 
 cmd open $set -f; rifle -p 0 -c ~/.config/lf/rifle.conf $fx
-

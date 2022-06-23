@@ -1,0 +1,28 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "css",
+    "html",
+    "markdown",
+    "sh",
+    "fish",
+    "json",
+    "lua"
+  ],
+  "tsserver.formatOnType": true,
+  "eslint.autoFixOnSave": true,
+  "diagnostic.infoSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.errorSign": "",
+  "diagnostic.hintSign": "",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.enableSign": true,
+  "diagnostic.level": "warning",
+  "diagnostic.floatConfig": {
+    "maxWidth": 150,
+    "maxHeight": 500
+  }
+}

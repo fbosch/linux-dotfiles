@@ -18,6 +18,7 @@
             "mhinz/vim-sayonara",
             "mg979/vim-visual-multi",
             "McAuleyPenney/tidy.nvim",
+            "simrat39/symbols-outline.nvim",
             {
               "mcchrish/zenbones.nvim",
               requires = "rktjmp/lush.nvim"
@@ -73,7 +74,8 @@
                 requires = { "kyazdani42/nvim-web-devicons", opt = true },
                 config = function()
                     require("lualine").setup({
-                        options = { theme = "auto" }
+                        options = { theme = "auto" },
+                        extensions = { "fugitive", "nvim-tree", "symbols-outline" }
                     })
                 end
 
